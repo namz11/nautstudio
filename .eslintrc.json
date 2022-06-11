@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    // note you must disable the base rule as it can report incorrect errors
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "no-console": ["error"],
+    "import/no-unresolved": "off",
+    "react/jsx-fragments": "off",
+    "no-unused-vars": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": "off",
+    "lines-between-class-members": "off",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    // note you must disable the base rule as it can report incorrect errors
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  }
+}
