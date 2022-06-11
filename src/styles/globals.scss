@@ -20,17 +20,68 @@ body {
   box-sizing: border-box;
 }
 
-.wrapper {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
+#container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
 }
 
-.logo {
-  width: 40vw;
-  height: auto;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: $white;
+}
+
+.content {
+  min-height: 100vh;
+  padding: 75px 15px 15px;
+
+  div {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 30px;
+  }
+  .content {
+    padding: 100px 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    width: 220px;
+    height: 100%;
+    transition: top 0.3s ease-in-out;
+  }
+  .content {
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    padding: 30px 30px 30px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    width: 250px;
+  }
+  .content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+  }
+}
+
+@media screen and (min-width: 1760px) {
+  .content {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+  }
 }

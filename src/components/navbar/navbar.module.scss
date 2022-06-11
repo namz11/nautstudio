@@ -1,0 +1,25 @@
+@import "@styles/variables/colors";
+@import "@styles/variables/fonts";
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .logoWrapper {
+    cursor: pointer;
+  }
+  .navItem {
+    cursor: pointer;
+    opacity: 0;
+  }
+  .navItemSelected {
+    cursor: pointer;
+  }
+
+  &:hover {
+    .navItem {
+      opacity: 0.4;
+    }
+  }
+}

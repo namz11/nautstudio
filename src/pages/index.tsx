@@ -1,11 +1,29 @@
-/* eslint-disable @next/next/no-img-element */
+import Navbar from "@components/navbar/navbar";
 import React from "react";
+import DashboardService from "src/firebaseClient/dashboardService";
 
 export default function Home() {
+  const service = new DashboardService();
+
+  const write = () => {
+    service.writeUserData();
+  };
+
+  const push = () => {
+    service.pushData();
+  };
+
   return (
-    <main className="wrapper">
-      <img src="/logo.jpeg" alt="Naut Studio logo" className="logo" />
-      <p>Naut Studio website coming soon!</p>
-    </main>
+    <div>
+      <Navbar selectedRoute="/" />
+      <main className="content">
+        <div>main screen</div>
+        <div>main screen</div>
+        <div>main screen</div>
+        <div>main screen</div>
+        <div>main screen</div>
+        <div>main screen</div>
+      </main>
+    </div>
   );
 }
