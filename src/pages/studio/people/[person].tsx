@@ -6,10 +6,10 @@ export default function Person() {
     <div>
       <Navbar selectedRoute="/studio/people/namit" />
       <main className="content">
-        <div>person screen</div>
-        <div>person screen</div>
-        <div>person screen</div>
-        <div>person screen</div>
+        <div>people-person screen</div>
+        <div>people-person screen</div>
+        <div>people-person screen</div>
+        <div>people-person screen</div>
       </main>
     </div>
   );
