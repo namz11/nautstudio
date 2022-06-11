@@ -65,53 +65,106 @@ function Navbar({ selectedRoute }: any) {
   }, [selectedRoute, routes]);
 
   return (
-    <header className="header">
-      <div className={styles.headerContent}>
-        <div
-          className={styles.logoWrapper}
-          onClick={() => navigateToRoute("/")}
-        >
-          नौत स्टूडियो <br />
-          naut studios
+    <>
+      <header className="header">
+        <div className={styles.headerContent}>
+          <div
+            className={styles.logoWrapper}
+            onClick={() => navigateToRoute("/")}
+          >
+            नौत स्टूडियो <br />
+            naut studio
+          </div>
+          <nav>
+            {routes &&
+              routes.map((route) => (
+                <div
+                  key={route.route}
+                  onClick={() => navigateToRoute(route.route)}
+                  className={getClassName(route.route)}
+                >
+                  {route.name}
+                </div>
+              ))}
+          </nav>
+          <nav>
+            {menu &&
+              menu.map((route: any) => (
+                <div
+                  key={route.route}
+                  onClick={() => navigateToRoute(route.route)}
+                  className={getClassName(route.route)}
+                >
+                  {route.name}
+                </div>
+              ))}
+          </nav>
+          <nav>
+            {subMenu &&
+              subMenu.map((route: any) => (
+                <div
+                  key={route.route}
+                  onClick={() => navigateToRoute(route.route)}
+                  className={getClassName(route.route)}
+                >
+                  {route.name}
+                </div>
+              ))}
+          </nav>
         </div>
-        <nav>
-          {routes &&
-            routes.map((route) => (
-              <div
-                key={route.route}
-                onClick={() => navigateToRoute(route.route)}
-                className={getClassName(route.route)}
-              >
-                {route.name}
-              </div>
-            ))}
-        </nav>
-        <nav>
-          {menu &&
-            menu.map((route: any) => (
-              <div
-                key={route.route}
-                onClick={() => navigateToRoute(route.route)}
-                className={getClassName(route.route)}
-              >
-                {route.name}
-              </div>
-            ))}
-        </nav>
-        <nav>
-          {subMenu &&
-            subMenu.map((route: any) => (
-              <div
-                key={route.route}
-                onClick={() => navigateToRoute(route.route)}
-                className={getClassName(route.route)}
-              >
-                {route.name}
-              </div>
-            ))}
-        </nav>
-      </div>
-    </header>
+      </header>
+
+      <header className="header-mobile">
+        <div className={styles.headerContentMobile}>
+          <div
+            className={styles.logoWrapper}
+            onClick={() => navigateToRoute("/")}
+          >
+            नौत स्टूडियो <br />
+            naut studio
+          </div>
+
+          <div className={styles.menu}>
+            <nav>
+              {routes &&
+                routes.map((route) => (
+                  <div
+                    key={route.route}
+                    onClick={() => navigateToRoute(route.route)}
+                    className={getClassName(route.route)}
+                  >
+                    {route.name}
+                  </div>
+                ))}
+            </nav>
+            <nav>
+              {menu &&
+                menu.map((route: any) => (
+                  <div
+                    key={route.route}
+                    onClick={() => navigateToRoute(route.route)}
+                    className={getClassName(route.route)}
+                  >
+                    {route.name}
+                  </div>
+                ))}
+            </nav>
+            <nav>
+              {subMenu &&
+                subMenu.map((route: any) => (
+                  <div
+                    key={route.route}
+                    onClick={() => navigateToRoute(route.route)}
+                    className={getClassName(route.route)}
+                  >
+                    {route.name}
+                  </div>
+                ))}
+            </nav>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }
 

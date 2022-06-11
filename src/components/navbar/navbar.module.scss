@@ -23,3 +23,39 @@
     }
   }
 }
+
+.headerContentMobile {
+  display: flex;
+  flex-direction: row;
+
+  .logoWrapper {
+    cursor: pointer;
+    flex-grow: 1;
+  }
+  .menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .navItem {
+      cursor: pointer;
+      display: none;
+    }
+    .navItemSelected {
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .navItem {
+        display: block;
+        opacity: 0.4;
+      }
+    }
+  }
+}
