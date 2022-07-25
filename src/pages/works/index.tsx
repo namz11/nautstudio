@@ -1,18 +1,12 @@
-import Navbar from "@components/navbar/navbar";
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Works() {
-  return (
-    <div>
-      <Navbar selectedRoute="/works" />
-      <main className="content">
-        <div>works screen</div>
-        <div>works screen</div>
-        <div>works screen</div>
-        <div>works screen</div>
-        <div>works screen</div>
-        <div>works screen</div>
-      </main>
-    </div>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push(`/works/selected`);
+  }, []);
+
+  return null;
 }

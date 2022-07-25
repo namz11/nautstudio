@@ -1,0 +1,12 @@
+@mixin full-image($height) {
+  max-width: 100%;
+  max-height: $height;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+}

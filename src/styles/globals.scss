@@ -1,5 +1,6 @@
 @import "@styles/variables/colors";
 @import "@styles/variables/fonts";
+@import "@styles/mixins/image";
 
 html,
 body {
@@ -14,6 +15,7 @@ body {
   height: 100%;
   overflow: hidden;
   letter-spacing: $letter-spacing-sm;
+  -webkit-font-smoothing: auto;
 }
 
 * {
@@ -52,10 +54,27 @@ body {
 .content {
   min-height: 100vh;
   padding: 95px 15px 15px;
+}
 
-  div {
-    height: 300px;
-    background-color: red;
+.project-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: $white;
+
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+  .nav-item {
+    cursor: pointer;
+    opacity: 0.4;
+  }
+  .nav-item-selected {
+    cursor: pointer;
   }
 }
 
@@ -81,10 +100,18 @@ body {
     margin-left: 220px;
     padding: 30px 30px 30px 0;
   }
+  .project-nav {
+    width: 220px;
+    transition: top 0.3s ease-in-out;
+    padding: 30px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .header {
+    width: 250px;
+  }
+  .project-nav {
     width: 250px;
   }
   .content {
@@ -98,4 +125,8 @@ body {
     width: calc(100% - 300px);
     margin-left: 300px;
   }
+}
+
+.hero-image {
+  @include full-image(calc(100vh - 65px));
 }

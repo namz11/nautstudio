@@ -1,3 +1,4 @@
+import ImageLayout from "@components/imageLayout/imageLayout";
 import Navbar from "@components/navbar/navbar";
 import { useRouter } from "next/router";
 import React from "react";
@@ -10,11 +11,7 @@ export default function WorksType() {
     <div>
       <Navbar selectedRoute={`/works/${type}`} />
       <main className="content">
-        <div>works-type screen</div>
-        <div>works-type screen</div>
-        <div>works-type screen</div>
-        <div>works-type screen</div>
-        <div>works-type screen</div>
+        <ImageLayout />
       </main>
     </div>
   );
