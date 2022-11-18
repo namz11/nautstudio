@@ -1,0 +1,10 @@
+.text {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+
+  .column {
+    width: 35%;
+    margin-right: 30px;
+  }
+}

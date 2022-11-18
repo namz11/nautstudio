@@ -1,5 +1,6 @@
 import React from "react";
 import "@styles/globals.scss";
+import "@styles/mySwiper.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
