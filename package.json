@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "dummy test",
     "prepare": "husky install"
   },
   "dependencies": {
